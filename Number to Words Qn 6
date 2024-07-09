@@ -1,0 +1,38 @@
+def number_to_words(n):
+if n == 0:
+return 'zero'
+units = [",'one','two','three','four','five','six','seven','eight','nine']
+teens = ['eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
+tens = [",'ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
+thousands = [",'thousand']
+words =[]
+if n == 1000:
+words.append(units[n // 1000])
+words.append(thousand[1])
+return " .join(words)
+if n>=100:
+words.append(units[n//100])
+words.append('hundred')
+n % = 100
+if n > 0:
+words.append('and')
+if 10< n<20:
+words.append(teens[n-11])
+return ".join(words)
+if n>=10:
+words.append(tens[n//10])
+n %=10
+if n>0:
+words.append(units[n])
+return ".join(words)
+
+count_letters_words(start,end):
+total_letters=0
+for i in range(start,end+1):
+words= number_to_words(i)
+letters=words.replace(",").replace('-',")
+total_letters +=len(letters)
+retutn total_letters
+
+total_letters=count_letters_words(1,1000)
+print(total_letters)
